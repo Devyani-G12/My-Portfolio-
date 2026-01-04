@@ -1,0 +1,185 @@
+/* ===============================
+   GLOBAL RESET & THEME
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f0f, #181818);
+    color: #eaeaea;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.75) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.navbar:hover{
+    text-shadow: #232323;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar span {
+    font-size: 0.9rem;
+}
+
+/* ===============================
+   SECTION BASE STYLE
+================================ */
+section {
+    margin-top: 3rem;
+    padding: 2.5rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+section h2 {
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #1db954, #1ed760);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-radius: 10px;
+}
+
+/* ===============================
+   ABOUT SECTION
+================================ */
+#about p {
+    font-size: 1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* ===============================
+   SKILLS
+================================ */
+#skills ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+#skills li {
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #232323, #1b1b1b);
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+#skills li:hover {
+    background: linear-gradient(135deg, #1db954, #1ed760);
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* ===============================
+   PROJECTS
+================================ */
+#projects ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#projects li {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #202020, #151515);
+    border-left: 4px solid #1db954;
+    transition: all 0.3s ease;
+}
+
+#projects li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+#projects h6 {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+#projects strong {
+    color: #1db954;
+}
+
+/* ===============================
+   CONTACT
+================================ */
+#contact form {
+    max-width: 420px;
+}
+
+#contact input {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#contact input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#contact input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #1db954;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#contact button {
+    background: linear-gradient(135deg, #1db954, #1ed760);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+#contact button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(29, 185, 84, 0.4);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    section {
+        padding: 1.8rem;
+    }
+
+    #skills ul {
+        justify-content: center;
+    }
+}
